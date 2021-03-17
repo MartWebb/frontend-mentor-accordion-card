@@ -1,0 +1,158 @@
+/* *,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+/* General */
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+.container {
+    width: 60%;
+    min-width: 730px;
+    height: 500px;
+    max-height: 900px;
+    background-color: #fff;
+    background-image: url("images/bg-pattern-desktop.svg");
+    border-radius: 2em;
+}
+
+/* Card */
+.image-container {
+    position: absolute;
+    padding-top: 10vh;
+    overflow: hidden;
+}
+
+.image-box-container {
+    position: absolute; 
+    padding-top: 10vh;
+}
+
+.card-container {
+    position: relative;
+    font-size: .8em;
+    width: 40%;
+    min-width: 295px;
+    max-width: 315px;
+    float: right;
+    margin-right: 5%;
+    top: 5%;
+}
+
+.acordian-image {
+    width: 90%;
+    position: relative;
+    left: -15%;
+}
+
+.box-image {
+    position: relative;
+    width: 90%;
+    bottom: -120px;
+    right: 100px;
+}
+
+.hidden {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+}
+
+.hidden.show {
+    opacity: 1;
+    max-height: 500px;  
+}
+
+.accordion-question-container {
+    display: flex;
+    border-bottom: hsl(240, 5%, 91%) solid 2px;
+}
+
+.open {
+    display: block;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+.accordion-question {
+    display: block;
+}
+
+.accordion-question::after {
+    display: inline-block;
+    content: url(images/icon-arrow-down.svg);
+    float: right;
+    margin-left: 8em;
+}
+
+.accordion-title {
+    text-align: center;
+}
+
+
+/* Small screens */
+@media (max-width: 870px) {
+
+    .container {
+        max-height: 740px;
+        min-width: 300px;
+        width: 100px;
+        padding: 2em;
+    }
+
+    .card-container {
+        margin-right: 5px;
+        padding: 0;
+        min-width: 280px;
+        width: 100px;
+        top: -130px;
+    }
+
+    .image-container {
+        position: relative;
+        width: 210px;
+        padding: 0px;
+        margin: 0px;
+        left: 45px;
+        top: -95px;
+    }
+
+    .acordian-image {
+        position: relative;
+        left: 0;
+        width: 100%;
+    }
+
+    .box-image {
+        position: relative;
+        width: 40%;
+        bottom: 265px;
+        left: 40px;
+    }
+
+    .open {
+        margin-left: 0;
+    }
+
+    .accordion-title {
+        margin-top: 3em;
+    }
+
+}
+  
+  
+  
+  
